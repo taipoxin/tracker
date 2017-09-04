@@ -1,4 +1,4 @@
-package by.apertura.service;
+package by.tiranid.service;
 
 import java.util.Date;
 

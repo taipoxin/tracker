@@ -1,4 +1,4 @@
-package by.apertura.model;
+package by.tiranid.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

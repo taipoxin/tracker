@@ -1,4 +1,4 @@
-package by.apertura.config;
+package by.tiranid.config;
 
 
 public class TestConfigParams {

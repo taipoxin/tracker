@@ -1,4 +1,4 @@
-package by.apertura.util;
+package by.tiranid.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.id.IdentifierGenerator;

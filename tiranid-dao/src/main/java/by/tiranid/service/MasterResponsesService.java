@@ -1,6 +1,6 @@
-package by.apertura.service;
+package by.tiranid.service;
 
-import by.apertura.model.MasterResponsesEntity;
+import by.tiranid.model.MasterResponsesEntity;
 
 import java.sql.Timestamp;
 import java.util.List;

@@ -1,7 +1,7 @@
-package by.apertura.service;
+package by.tiranid.service;
 
 
-import by.apertura.model.ClientsRequestsEntity;
+import by.tiranid.model.ClientsRequestsEntity;
 
 import java.sql.Timestamp;
 import java.util.List;

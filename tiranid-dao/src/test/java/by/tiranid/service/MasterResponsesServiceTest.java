@@ -1,11 +1,11 @@
-package by.apertura.service;
+package by.tiranid.service;
 
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.github.springtestdbunit.annotation.DatabaseTearDown;
-import by.apertura.config.TestDataBaseConfig;
-import by.apertura.dao.MasterResponsesRepository;
-import by.apertura.model.MasterResponsesEntity;
+import by.tiranid.config.TestDataBaseConfig;
+import by.tiranid.dao.MasterResponsesRepository;
+import by.tiranid.model.MasterResponsesEntity;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +16,7 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import by.apertura.service.impl.MasterResponsesServiceImpl;
+import by.tiranid.service.impl.MasterResponsesServiceImpl;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;

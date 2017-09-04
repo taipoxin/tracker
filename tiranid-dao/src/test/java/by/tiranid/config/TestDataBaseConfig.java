@@ -1,4 +1,4 @@
-package by.apertura.config;
+package by.tiranid.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

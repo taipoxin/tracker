@@ -1,10 +1,10 @@
-package by.apertura.service.impl;
+package by.tiranid.service.impl;
 
-import by.apertura.dao.MasterResponsesRepository;
-import by.apertura.model.MasterResponsesEntity;
+import by.tiranid.dao.MasterResponsesRepository;
+import by.tiranid.model.MasterResponsesEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import by.apertura.service.MasterResponsesService;
+import by.tiranid.service.MasterResponsesService;
 
 import java.sql.Timestamp;
 import java.util.List;

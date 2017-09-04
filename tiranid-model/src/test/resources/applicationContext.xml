@@ -12,7 +12,7 @@
 
     <context:property-placeholder location="classpath:application.properties" />
 
-    <context:component-scan  base-package="by.apertura.model" />
+    <context:component-scan  base-package="by.tiranid.model" />
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
@@ -28,7 +28,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="packagesToScan">
             <list>
-                <value>by.apertura.model</value>
+                <value>by.tiranid.model</value>
             </list>
         </property>
         <property name="hibernateProperties">

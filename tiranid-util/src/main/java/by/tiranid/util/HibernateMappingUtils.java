@@ -1,4 +1,4 @@
-package by.apertura.util;
+package by.tiranid.util;
 
 import java.util.Iterator;
 import java.util.Map;

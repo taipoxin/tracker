@@ -1,7 +1,7 @@
-package by.apertura.model;
+package by.tiranid.model;
 
-import by.apertura.util.HibernateMappingUtils;
-import by.apertura.util.SequenceIncrementValidator;
+import by.tiranid.util.HibernateMappingUtils;
+import by.tiranid.util.SequenceIncrementValidator;
 import org.hibernate.SessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;

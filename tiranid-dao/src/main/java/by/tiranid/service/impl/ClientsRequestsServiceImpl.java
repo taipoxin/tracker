@@ -1,10 +1,10 @@
-package by.apertura.service.impl;
+package by.tiranid.service.impl;
 
-import by.apertura.dao.ClientsRequestsRepository;
-import by.apertura.model.ClientsRequestsEntity;
+import by.tiranid.dao.ClientsRequestsRepository;
+import by.tiranid.model.ClientsRequestsEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import by.apertura.service.ClientsRequestsService;
+import by.tiranid.service.ClientsRequestsService;
 
 import java.sql.Timestamp;
 import java.util.List;

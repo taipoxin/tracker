@@ -1,6 +1,6 @@
-package by.apertura.dao;
+package by.tiranid.dao;
 
-import by.apertura.model.ClientsRequestsEntity;
+import by.tiranid.model.ClientsRequestsEntity;
 import org.springframework.data.repository.CrudRepository;
 
 import java.sql.Timestamp;
