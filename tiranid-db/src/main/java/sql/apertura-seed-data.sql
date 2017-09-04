@@ -1,14 +1,21 @@
-
-	
 /*
-добавление новой строки заявки
-связи и индексы не делал
-*/
+work_days indexed by work_date,iterations
+work_iters indexed by ddate
+ */
 
-INSERT INTO master_responses (login, req_number, message, date) 
-	VALUES ('good_master', 127001, 'Сообщение о принятии запроса', '2007-09-03 04:20:00');
+SELECT * FROM work_days WHERE work_date = '2007-09-02';
+SELECT * FROM work_days WHERE work_date => '2007-09-01' ORDER BY iterations DESC;
+SELECT iterations FROM work_days WHERE work_date => '2007-09-01'
+AND work_date < '2007-10-01' ORDER BY iterations DESC;
+
+SELECT ttime FROM work_iters WHERE ddate = '2007-09-01';
 
 
-INSERT INTO clients_requests (login, req_number, message, date) 
-	VALUES ('poor_user', 127001, 'Помогите, сломался комплюхтер', '2007-09-02 04:20:00');
-	
+INSERT INTO work_days (work_date, iterations, work_time)
+	VALUES ('2007-09-02', 10, '9:13;16:18;');
+
+INSERT INTO work_iters (ddate, ttime)
+	VALUES ('2007-09-02', '04:20:00');
+
+
+
