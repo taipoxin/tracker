@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="by.tiranid.model.WorkDaysEntity" table="work_days" schema="test">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="workDate">
+            <column name="work_date" sql-type="date"/>
+        </property>
+        <property name="iterations">
+            <column name="iterations" sql-type="tinyint(4)"/>
+        </property>
+        <property name="workTime">
+            <column name="work_time" sql-type="text"/>
+        </property>
+    </class>
+    <class name="by.tiranid.model.WorkItersEntity" table="work_iters" schema="test">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="ddate">
+            <column name="ddate" sql-type="date"/>
+        </property>
+        <property name="ttime">
+            <column name="ttime" sql-type="time"/>
+        </property>
+    </class>
+</hibernate-mapping>
