@@ -4,9 +4,9 @@ package by.tiranid.config;
 public class ConfigParams {
 
     // DataConfig
-    public static final String username = "user";
-    public static final String password = "password";
-    public static final String db_url = "jdbc:mysql://localhost:3306/dev";
+    public static final String username = "tiranid";
+    public static final String password = "6559520";
+    public static final String db_url = "jdbc:mysql://localhost:3306/test";
     public static final String db_driver = "com.mysql.jdbc.Driver";
 
     public static final String hibernate_dialect = "org.hibernate.dialect.MySQLDialect";

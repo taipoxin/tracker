@@ -1,5 +1,7 @@
 package by.tiranid.config;
 
+import org.hibernate.ejb.HibernatePersistence;
+import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -29,6 +31,7 @@ public class DataConfig {
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = ConfigParams.show_sql;
     private static final String PROPERTY_NAME_ENTITYMANAGER_PACKAGES_TO_SCAN = ConfigParams.entitymanager_packages;
     private static final String PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO = ConfigParams.hbm2ddl_auto;
+
 
 
     @Bean

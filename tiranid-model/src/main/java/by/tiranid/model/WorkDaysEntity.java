@@ -4,20 +4,21 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "work_days", schema = "test", catalog = "")
+@Table(name = "work_days")
 public class WorkDaysEntity {
-    private int id;
+    private Long id;
     private Date workDate;
-    private byte iterations;
+    private Byte iterations;
     private String workTime;
 
     @Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -33,11 +34,11 @@ public class WorkDaysEntity {
 
     @Basic
     @Column(name = "iterations", nullable = false)
-    public byte getIterations() {
+    public Byte getIterations() {
         return iterations;
     }
 
-    public void setIterations(byte iterations) {
+    public void setIterations(Byte iterations) {
         this.iterations = iterations;
     }
 
@@ -58,8 +59,8 @@ public class WorkDaysEntity {
 
         WorkDaysEntity that = (WorkDaysEntity) o;
 
-        if (id != that.id) return false;
-        if (iterations != that.iterations) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+		if (iterations != null ? !iterations.equals(that.iterations) : that.iterations != null) return false;
         if (workDate != null ? !workDate.equals(that.workDate) : that.workDate != null) return false;
         if (workTime != null ? !workTime.equals(that.workTime) : that.workTime != null) return false;
 
@@ -68,10 +69,20 @@ public class WorkDaysEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        long result = id;
         result = 31 * result + (workDate != null ? workDate.hashCode() : 0);
-        result = 31 * result + (int) iterations;
+        result = 31 * result + (iterations != null ? iterations.hashCode() : 0);
         result = 31 * result + (workTime != null ? workTime.hashCode() : 0);
-        return result;
+        return (int) result;
+    }
+	
+	@Override
+    public String toString() {
+        return new StringBuilder()
+                .append("id: " + this.id + "\n")
+                .append("work_date: " + this.workDate + "\n")
+                .append("iterations: " + this.iterations + "\n")
+                .append("work_time: " + this.workTime + "\n")
+                .toString();
     }
 }

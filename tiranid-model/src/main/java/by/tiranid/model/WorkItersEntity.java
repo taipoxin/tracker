@@ -5,19 +5,20 @@ import java.sql.Date;
 import java.sql.Time;
 
 @Entity
-@Table(name = "work_iters", schema = "test", catalog = "")
+@Table(name = "work_iters")
 public class WorkItersEntity {
-    private int id;
+    private Long id;
     private Date ddate;
     private Time ttime;
 
     @Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -48,7 +49,7 @@ public class WorkItersEntity {
 
         WorkItersEntity that = (WorkItersEntity) o;
 
-        if (id != that.id) return false;
+		if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (ddate != null ? !ddate.equals(that.ddate) : that.ddate != null) return false;
         if (ttime != null ? !ttime.equals(that.ttime) : that.ttime != null) return false;
 
@@ -57,9 +58,18 @@ public class WorkItersEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        long result = id;
         result = 31 * result + (ddate != null ? ddate.hashCode() : 0);
         result = 31 * result + (ttime != null ? ttime.hashCode() : 0);
-        return result;
+        return (int) result;
+    }
+	
+	@Override
+    public String toString() {
+        return new StringBuilder()
+                .append("id: " + this.id + "\n")
+                .append("ddate: " + this.ddate + "\n")
+                .append("ttime: " + this.ttime + "\n")
+                .toString();
     }
 }

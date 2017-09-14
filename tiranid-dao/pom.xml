@@ -11,6 +11,11 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>tiranid-dao</artifactId>
     <name>TIRANID : tiranid Dao</name>
+	
+	<properties>
+		<tomcat.version>8.0.3</tomcat.version>
+		<java.version>1.8</java.version>
+	</properties>
 
     <dependencies>
         <dependency>
@@ -18,6 +23,14 @@
             <artifactId>tiranid-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
     </dependencies>
 
 </project>
