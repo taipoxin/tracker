@@ -49,6 +49,7 @@ public class WorkItersServiceTest {
 
 
     public WorkItersEntity createTestWorkItersEntity() throws Exception {
+
         WorkItersEntity record = new WorkItersEntity();
         record.setDdate(Date.valueOf(recordSampleDdate));
         record.setTtime(Time.valueOf(recordSampleTtime));

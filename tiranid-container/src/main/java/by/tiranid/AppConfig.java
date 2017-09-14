@@ -10,13 +10,11 @@ import java.io.File;
 
 @SpringBootApplication
 
-@ComponentScan("by.apertura")
+@ComponentScan("by.tiranid")
 public class AppConfig {
 
-    private static final String pathToConfig = "src/main/resources/logger/log4j2.xml";
 
     public static void main(String[] args){
         SpringApplication.run(AppConfig.class);
-
     }
 }

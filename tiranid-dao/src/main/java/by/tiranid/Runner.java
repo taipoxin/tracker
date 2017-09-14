@@ -40,13 +40,13 @@ public class Runner implements CommandLineRunner {
     public void run(String... args) {
         initService();
 
-
+/*
         WorkDaysEntity entity = workDaysService.addRecord(
                 EntityUtils.createTestWorkDaysEntity(recordSampleWorkDate, (byte) 5, recordSampleWorkTime));
 
         WorkDaysEntity entity1 = workDaysService.getFirst();
         Assert.assertEquals(entity1, entity);
-
+*/
 
     }
 

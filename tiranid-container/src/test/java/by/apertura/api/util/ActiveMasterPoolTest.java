@@ -1,8 +1,9 @@
 package by.apertura.api.util;
 
-import by.apertura.api.model.JobStatus;
-import by.apertura.api.model.Location;
-import by.apertura.api.model.MasterRequestType;
+import by.tiranid.api.model.JobStatus;
+import by.tiranid.api.model.Location;
+import by.tiranid.api.model.MasterRequestType;
+import by.tiranid.api.util.ActiveMasterPool;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,6 +14,15 @@ import static org.junit.Assert.*;
 
 
 public class ActiveMasterPoolTest {
+
+    @Test
+    public void showDefaultHash() {
+        System.out.println(("tiranid6559520").hashCode());
+    }
+
+
+}
+/*
     private static final Long MASTER_ID = 105L;
     private static final JobStatus MASTER_JOB_STATUS = JobStatus.FREE;
     private static final String MASTER_NAME = "Victor";
@@ -65,4 +75,4 @@ public class ActiveMasterPoolTest {
         masterRequestType.setLocation(LOCATION);
         return masterRequestType;
     }
-}
+}*/
