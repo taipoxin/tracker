@@ -11,9 +11,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-/**
- * Created by Yayheniy_Lepkovich on 8/23/2017.
- */
+
 public class ActiveMasterPoolTest {
     private static final Long MASTER_ID = 105L;
     private static final JobStatus MASTER_JOB_STATUS = JobStatus.FREE;

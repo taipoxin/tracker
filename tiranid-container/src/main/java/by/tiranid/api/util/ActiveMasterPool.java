@@ -7,9 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Yayheniy_Lepkovich on 8/22/2017.
- */
+
 /*
 @Component
 */

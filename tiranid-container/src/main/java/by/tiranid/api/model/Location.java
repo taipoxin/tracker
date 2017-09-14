@@ -1,8 +1,6 @@
 package by.tiranid.api.model;
 
-/**
- * Created by Yayheniy_Lepkovich on 8/22/2017.
- */
+
 public class Location {
     public Long x;
     public Long y;

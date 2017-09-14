@@ -11,9 +11,7 @@ import org.hibernate.tuple.entity.EntityMetamodel;
 
 import java.util.Collection;
 
-/**
- * Created by Yayheniy_Lepkovich on 8/28/2017.
- */
+
 public class SequenceIncrementValidator {
     public SequenceIncrementValidator() {
     }

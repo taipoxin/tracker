@@ -7,9 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import java.io.File;
 
-/**
- * Created by Yayheniy_Lepkovich on 7/13/2017.
- */
+
 @SpringBootApplication
 
 @ComponentScan("by.apertura")

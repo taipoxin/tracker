@@ -18,15 +18,12 @@ import java.io.*;
 import java.util.*;
 
 
-/**
- * Created by Yayheniy_Lepkovich on 8/28/2017.
- */
+
 @Component
 public class HttpLoggingFilter implements Filter {
 
     private static final Logger log = LoggerFactory.getLogger(HttpLoggingFilter.class);
 
-    //private static final Logger log = LogManager.getLogger();
 
 
     @Override

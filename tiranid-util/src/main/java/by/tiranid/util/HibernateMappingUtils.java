@@ -12,9 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
-/**
- * Created by Yayheniy_Lepkovich on 8/10/2017.
- */
+
 public class HibernateMappingUtils
 {
     /** SLF4J Logging instance. */
