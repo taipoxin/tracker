@@ -5,8 +5,6 @@ package by.tiranid.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-//import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -16,6 +14,8 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.*;
+
+//import org.apache.logging.log4j.Logger;
 
 
 
@@ -28,7 +28,7 @@ public class HttpLoggingFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        log.error("heh");
+        log.info("heh");
     }
 
     @Override
