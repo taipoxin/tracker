@@ -15,7 +15,4 @@ public class ConfigParams {
     public static final String entitymanager_packages = "by.tiranid.model";
     public static final String hbm2ddl_auto = "update";
 
-
-
-
 }

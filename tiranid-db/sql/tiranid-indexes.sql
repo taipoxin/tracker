@@ -5,6 +5,7 @@
 ALTER TABLE work_days ADD INDEX work_date_iterations(work_date, iterations);
 
 /*
-      индекс по дате
+      индекс по дате и длительности
 */
-ALTER TABLE work_iters ADD INDEX ddate(ddate);
+ALTER TABLE work_iters
+  ADD INDEX ddate_duration(ddate, duration);

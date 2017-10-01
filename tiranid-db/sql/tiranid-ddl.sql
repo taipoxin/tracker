@@ -24,10 +24,12 @@ CREATE TABLE IF NOT EXISTS work_days(
 key
 ddate
 ttime
+duration
 */
 CREATE TABLE IF NOT EXISTS work_iters(
-	id INT NOT NULL AUTO_INCREMENT,
-	ddate DATE NOT NULL,
-	ttime TIME NOT NULL,
+	id       INT  NOT NULL AUTO_INCREMENT,
+	ddate    DATE NOT NULL,
+	ttime    TIME NOT NULL,
+	duration TIME NOT NULL,
 	PRIMARY KEY(id)
 );

@@ -5,7 +5,6 @@ import by.tiranid.model.WorkItersEntity;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -22,9 +21,13 @@ public interface WorkItersService {
     WorkItersEntity getFirstByDdate(Date ddate);
     WorkItersEntity getFirstByTtime(Time ttime);
 
+    WorkItersEntity getFirstByDuration(Time duration);
+
 
 
     List<WorkItersEntity> getByDdate(Date ddate);
+
+    List<WorkItersEntity> getByDuration(Time duration);
 
 	
     WorkItersEntity getLast();

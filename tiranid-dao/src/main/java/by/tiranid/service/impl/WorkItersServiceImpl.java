@@ -2,13 +2,12 @@ package by.tiranid.service.impl;
 
 import by.tiranid.dao.WorkItersRepository;
 import by.tiranid.model.WorkItersEntity;
+import by.tiranid.service.WorkItersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import by.tiranid.service.WorkItersService;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.List;
 
 
@@ -61,13 +60,21 @@ public class WorkItersServiceImpl implements WorkItersService {
         return WorkItersRepository.findFirstByTtime(ttime);
     }
 
+    public WorkItersEntity getFirstByDuration(Time duration) {
+        return WorkItersRepository.findFirstByDuration(duration);
+    }
+
 
 
     
     public List<WorkItersEntity> getByDdate(Date ddate) {
         return WorkItersRepository.findByDdate(ddate);
     }
-    
+
+    public List<WorkItersEntity> getByDuration(Time duration) {
+        return WorkItersRepository.findByDuration(duration);
+    }
+
 
 
     public WorkItersEntity getFirst() {

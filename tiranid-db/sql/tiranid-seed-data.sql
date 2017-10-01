@@ -16,6 +16,9 @@ SELECT iterations FROM work_days WHERE work_date >= '2007-09-01'
 AND work_date < '2007-10-01' ORDER BY iterations DESC;
 
 SELECT ttime FROM work_iters WHERE ddate = '2007-09-01';
+SELECT ddate
+FROM work_iters
+WHERE duration = '00:25:00';
 
 
 

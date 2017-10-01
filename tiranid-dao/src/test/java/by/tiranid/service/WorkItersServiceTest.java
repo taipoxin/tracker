@@ -1,11 +1,12 @@
 package by.tiranid.service;
 
-import com.github.springtestdbunit.DbUnitTestExecutionListener;
-import com.github.springtestdbunit.annotation.DatabaseSetup;
-import com.github.springtestdbunit.annotation.DatabaseTearDown;
 import by.tiranid.config.TestDataBaseConfig;
 import by.tiranid.dao.WorkItersRepository;
 import by.tiranid.model.WorkItersEntity;
+import by.tiranid.service.impl.WorkItersServiceImpl;
+import com.github.springtestdbunit.DbUnitTestExecutionListener;
+import com.github.springtestdbunit.annotation.DatabaseSetup;
+import com.github.springtestdbunit.annotation.DatabaseTearDown;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,6 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
-import by.tiranid.service.impl.WorkItersServiceImpl;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -35,6 +35,7 @@ public class WorkItersServiceTest {
     private static final Long recordSampleId = 1L;
     private static final String recordSampleDdate = "2007-09-02";
     private static final String recordSampleTtime = "04:20:00";
+    private static final String recordSampleDuration = "00:25:00";
 
 
     @Autowired
@@ -53,6 +54,7 @@ public class WorkItersServiceTest {
         WorkItersEntity record = new WorkItersEntity();
         record.setDdate(Date.valueOf(recordSampleDdate));
         record.setTtime(Time.valueOf(recordSampleTtime));
+        record.setDuration(Time.valueOf(recordSampleDuration));
         return record;
     }
 
@@ -104,6 +106,16 @@ public class WorkItersServiceTest {
         Assert.assertEquals(t, entity.getTtime());
     }
 
+    @Test
+    @DatabaseSetup("/data/work_iters/sampleTestData.xml")
+    public void testGetFirstByDuration() throws Exception {
+        Time t = Time.valueOf(recordSampleDuration);
+        WorkItersEntity entity = workItersService.getFirstByDuration(t);
+        Assert.assertEquals(t, entity.getDuration());
+    }
+
+
+
 
     @Test
     @DatabaseSetup("/data/work_iters/sampleTestData.xml")
@@ -135,6 +147,14 @@ public class WorkItersServiceTest {
     public void testGetByDdate() throws Exception {
         workItersService.addRecord(createTestWorkItersEntity());
         List<WorkItersEntity> list = workItersService.getByDdate(Date.valueOf(recordSampleDdate));
+        Assert.assertEquals(2, list.size());
+    }
+
+    @Test
+    @DatabaseSetup("/data/work_iters/sampleTestData.xml")
+    public void testGetByDuration() throws Exception {
+        workItersService.addRecord(createTestWorkItersEntity());
+        List<WorkItersEntity> list = workItersService.getByDuration(Time.valueOf(recordSampleDuration));
         Assert.assertEquals(2, list.size());
     }
 }

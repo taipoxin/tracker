@@ -10,6 +10,7 @@ public class WorkItersEntity {
     private Long id;
     private Date ddate;
     private Time ttime;
+    private Time duration;
 
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,6 +43,17 @@ public class WorkItersEntity {
         this.ttime = ttime;
     }
 
+
+    @Basic
+    @Column(name = "duration", nullable = false)
+    public Time getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Time duration) {
+        this.duration = duration;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,6 +64,7 @@ public class WorkItersEntity {
 		if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (ddate != null ? !ddate.equals(that.ddate) : that.ddate != null) return false;
         if (ttime != null ? !ttime.equals(that.ttime) : that.ttime != null) return false;
+        if (duration != null ? !duration.equals(that.duration) : that.duration != null) return false;
 
         return true;
     }
@@ -61,6 +74,7 @@ public class WorkItersEntity {
         long result = id;
         result = 31 * result + (ddate != null ? ddate.hashCode() : 0);
         result = 31 * result + (ttime != null ? ttime.hashCode() : 0);
+        result = 31 * result + (duration != null ? duration.hashCode() : 0);
         return (int) result;
     }
 	
@@ -70,6 +84,7 @@ public class WorkItersEntity {
                 .append("id: " + this.id + "\n")
                 .append("ddate: " + this.ddate + "\n")
                 .append("ttime: " + this.ttime + "\n")
+                .append("duration: " + this.duration + "\n")
                 .toString();
     }
 }
