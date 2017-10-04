@@ -11,9 +11,10 @@
     <modules>
         <module>tiranid-dependency</module>
         <module>tiranid-parent</module>
-        <module>tiranid-db</module>
         <module>tiranid-util</module>
-        <module>tiranid-container</module>
+        <module>tiranid-db</module>
+        <module>tiranid-model</module>
         <module>tiranid-dao</module>
+        <module>tiranid-container</module>
     </modules>
 </project>
