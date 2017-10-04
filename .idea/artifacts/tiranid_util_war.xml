@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tiranid-util:war">
+    <output-path>$PROJECT_DIR$/tiranid-util/target</output-path>
+    <root id="archive" name="tiranid-util-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tiranid-util:war exploded" />
+    </root>
+  </artifact>
+</component>

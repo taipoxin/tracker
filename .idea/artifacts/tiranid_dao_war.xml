@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tiranid-dao:war">
+    <output-path>$PROJECT_DIR$/tiranid-dao/target</output-path>
+    <root id="archive" name="tiranid-dao-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tiranid-dao:war exploded" />
+    </root>
+  </artifact>
+</component>

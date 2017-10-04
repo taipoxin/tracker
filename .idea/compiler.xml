@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apertura-container (1)" />
+        <module name="apertura-dao" />
+        <module name="apertura-db" />
+        <module name="apertura-dependency" />
+        <module name="apertura-model" />
+        <module name="tiranid-dao" />
+        <module name="tiranid-db" />
+        <module name="tiranid-dependency" />
+        <module name="tiranid-model" />
+        <module name="tiranid-util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apertura-container" target="1.8" />
+      <module name="apertura-container (1)" target="1.8" />
+      <module name="apertura-dao" target="1.8" />
+      <module name="apertura-db" target="1.8" />
+      <module name="apertura-dependency" target="1.5" />
+      <module name="apertura-model" target="1.8" />
+      <module name="apertura-parent" target="1.8" />
+      <module name="apertura-util" target="1.8" />
+      <module name="apertura_site" target="1.5" />
+      <module name="tiranid-container" target="1.8" />
+      <module name="tiranid-dao" target="1.8" />
+      <module name="tiranid-db" target="1.8" />
+      <module name="tiranid-dependency" target="1.5" />
+      <module name="tiranid-model" target="1.8" />
+      <module name="tiranid-parent" target="1.8" />
+      <module name="tiranid-util" target="1.8" />
+      <module name="tiranid_tracker" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
