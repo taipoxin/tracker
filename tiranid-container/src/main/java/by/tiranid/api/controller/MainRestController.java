@@ -1,6 +1,6 @@
 package by.tiranid.api.controller;
 
-import by.tiranid.config.HttpLoggingFilter;
+import by.tiranid.AppConfig;
 import by.tiranid.dao.WorkDaysRepository;
 import by.tiranid.dao.WorkItersRepository;
 import by.tiranid.model.WorkItersEntity;
@@ -10,18 +10,20 @@ import by.tiranid.service.impl.WorkItersServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.sql.Date;
 import java.sql.Time;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 @RestController
 public class MainRestController {
 
-    private static final Logger log = LoggerFactory.getLogger(HttpLoggingFilter.class);
+    private static final Logger log = LoggerFactory.getLogger(MainRestController.class);
     private static int userHash = -442696469;
     @Autowired
     private WorkDaysRepository workDaysRepository;
@@ -61,6 +63,15 @@ public class MainRestController {
         log.info("get request to postIter");
         log.info("Returning OK Http Code");
         return ResponseEntity.ok();
+    }
+
+    private String changeNtoBr(String message) {
+        return Pattern.compile("\n").matcher(message).replaceAll("<br/>");
+    }
+
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
+    public String mainHello() {
+        return changeNtoBr(AppConfig.message);
     }
 
 
